@@ -1,0 +1,16 @@
+{
+    "presets": [
+      [
+        "env", 
+        { 
+          "targets": {
+            "browsers": [ ">0.25%", "not ie 10", "not op_mini all"]
+          },
+          "useBuiltIns": true,
+          "uglify": true,
+          "modules": false
+        }
+      ]
+    ]
+  }
+  
