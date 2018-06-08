@@ -12,7 +12,7 @@ const config = {
   mode: 'production',
   entry: './src/index.js',
   output: {
-    filename: '[name].js?v=[chunkhash]',
+    filename: '[name].js?v=[contenthash]',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
