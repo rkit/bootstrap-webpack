@@ -1,3 +1,3 @@
 # Bootstrap for Webpack
 
-For quickstart.
+⚠️ For quickstart
