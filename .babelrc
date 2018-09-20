@@ -1,16 +1,22 @@
 {
-    "presets": [
-      [
-        "env", 
-        { 
-          "targets": {
-            "browsers": [ ">0.25%", "not ie 10", "not op_mini all"]
-          },
-          "useBuiltIns": true,
-          "uglify": true,
-          "modules": false
-        }
-      ]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            ">0.25%",
+            "not ie 10",
+            "not op_mini all"
+          ]
+        },
+        "useBuiltIns": true,
+        "uglify": true,
+        "modules": false
+      }
     ]
-  }
-  
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+}

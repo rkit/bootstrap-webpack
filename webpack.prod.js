@@ -12,8 +12,14 @@ const config = {
   mode: 'production',
   entry: './src/index.js',
   output: {
-    filename: '[name].js?v=[contenthash]',
+    filename: '[name].[contenthash].js',
+    chunkFilename: '[name].[contenthash].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
@@ -22,6 +28,9 @@ const config = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
         },
       },
       {
@@ -43,7 +52,7 @@ const config = {
     }),
     // Extract CSS into separate files
     new MiniCssExtractPlugin({
-      filename: '[name].css?v=[contenthash]',
+      filename: '[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
     // Optimize/Minimize CSS assets

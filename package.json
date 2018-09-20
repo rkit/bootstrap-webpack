@@ -9,7 +9,9 @@
     "build": "webpack --config ./webpack.prod.js",
     "analyzer": "WEBPACK_ANALYZER=true webpack --config ./webpack.prod.js"
   },
-  "keywords": ["webpack"],
+  "keywords": [
+    "webpack"
+  ],
   "author": "Igor Romanov <rkit.ru@gmail.com>",
   "license": "MIT",
   "private": true,
@@ -18,9 +20,11 @@
     "url": "https://github.com/rkit/bootstrap-webpack.git"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^8.0.2",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
@@ -31,10 +35,13 @@
     "mini-css-extract-plugin": "^0.4.0",
     "optimize-css-assets-webpack-plugin": "^4.0.2",
     "prettier": "^1.13.2",
-    "webpack": "^4.10.1",
+    "size-plugin": "^1.0.0",
+    "webpack": "^4.19.1",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "core-js": "^2.5.7"
+  }
 }

@@ -10,7 +10,13 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: '[name].js',
+    chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
@@ -19,6 +25,9 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
         },
       },
       {
